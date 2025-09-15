@@ -2,13 +2,13 @@ const axios = require('axios');
 
 async function sendWhatsappMessage(phoneNumber, message, app = null) {
     try {
-        const phoneNumberId = '1810065506501128'; // Your business number ID
-        const token = '1234'; // Load from .env
+        const phoneNumberId = '1810065506501128'; // Your WhatsApp business number ID
+        const token = 'EAATpMvZAJA5oBPEhSNwN7MwG76VVPxTykrClLQnHbpzys4yD2okEHArzhUhdcBrotjm8wZArw5YIk9An6hjUvlCfTXA0ZADh2vIZBASRg9hJiAZAR5ZCRGISmeGKNLjkQ9nM6kDYx1X6k5r8yghPipOIiUKRkCa3gTZAnDxN3atm4h56JSlNCCZBxSeHgZCz6'; 
         const url = `https://graph.facebook.com/v17.0/${phoneNumberId}/messages`;
 
         const data = {
             messaging_product: 'whatsapp',
-            to: phoneNumber, // Must be in international format, no +
+            to: phoneNumber, // International format without "+"
             type: 'text',
             text: { body: message }
         };
@@ -28,4 +28,5 @@ async function sendWhatsappMessage(phoneNumber, message, app = null) {
     }
 }
 
-sendWhatsappMessage('48794740269','test')
+// Example usage:
+sendWhatsappMessage('48794740269', 'Hello from WhatsApp Cloud API!');
