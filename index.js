@@ -3,8 +3,8 @@ const axios = require('axios');
 async function sendWhatsappMessage(phoneNumber, message, app = null) {
     try {
         const phoneNumberId = '1810065506501128'; // Your business number ID
-        const token = 'EAATpMvZAJA5oBPEhSNwN7MwG76VVPxTykrClLQnHbpzys4yD2okEHArzhUhdcBrotjm8wZArw5YIk9An6hjUvlCfTXA0ZADh2vIZBASRg9hJiAZAR5ZCRGISmeGKNLjkQ9nM6kDYx1X6k5r8yghPipOIiUKRkCa3gTZAnDxN3atm4h56JSlNCCZBxSeHgZCz6'; // Load from .env
-        const url = `https://graph.facebook.com/v18.0/${phoneNumberId}/messages`;
+        const token = '1234'; // Load from .env
+        const url = `https://graph.facebook.com/v17.0/${phoneNumberId}/messages`;
 
         const data = {
             messaging_product: 'whatsapp',
