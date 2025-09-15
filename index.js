@@ -3,7 +3,7 @@ const axios = require('axios');
 async function sendWhatsappMessage(phoneNumber, message, app = null) {
     try {
         const phoneNumberId = '1810065506501128'; // Your business number ID
-        const token = process.env.WHATSAPP_ACCESS_TOKEN; // Load from .env
+        const token = '1810065506501128'; // Load from .env
         const url = `https://graph.facebook.com/v18.0/${phoneNumberId}/messages`;
 
         const data = {
